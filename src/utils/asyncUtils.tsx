@@ -14,7 +14,7 @@ export const getUserById = async (
   try {
     const res: AxiosResponse<ApiUserResponse> =
       await axios.get<ApiUserResponse>(
-        `https://mongoserverlearn.onrender.com/users/search?_id=${id}`
+        `https://mongoserverlearn-farc.onrender.com/users/search?_id=${id}`
       );
     if (res.data) {
       return res.data;
@@ -31,7 +31,7 @@ export async function getTrainerByDropdownProp(
 ): Promise<trainerDBState> {
   try {
     const res: AxiosResponse<trainerDBState> = await axios.get<trainerDBState>(
-      `https://mongoserverlearn.onrender.com/trainers/search?_id=${option.value}`
+      `https://mongoserverlearn-farc.onrender.com/trainers/search?_id=${option.value}`
     );
     if (res.data) {
       return res.data as trainerDBState;
@@ -50,7 +50,7 @@ export const getAllTrainers = async (): Promise<
   try {
     const res: AxiosResponse<trainerDBState[]> = await axios.get<
       trainerDBState[]
-    >(`https://mongoserverlearn.onrender.com/trainers/`);
+    >(`https://mongoserverlearn-farc.onrender.com/trainers/`);
     if (res.data) {
       return res.data;
     } else {
@@ -79,7 +79,7 @@ export const getAllStudents = async (): Promise<
   try {
     const res: AxiosResponse<studentDBState[]> = await axios.get<
       studentDBState[]
-    >(`https://mongoserverlearn.onrender.com/students/`);
+    >(`https://mongoserverlearn-farc.onrender.com/students/`);
     if (res.data) {
       return res.data;
     } else {
@@ -95,7 +95,7 @@ export const getStudentById = async (
 ): Promise<studentDBState | undefined> => {
   try {
     const res: AxiosResponse<studentDBState> = await axios.get<studentDBState>(
-      `https://mongoserverlearn.onrender.com/students/search?user:${userId}`
+      `https://mongoserverlearn-farc.onrender.com/students/search?user:${userId}`
     );
     if (res.data) {
       return res.data;
@@ -125,7 +125,7 @@ export const getAllTrainings = async (): Promise<
   try {
     const res: AxiosResponse<trainingDBState[]> = await axios.get<
       trainingDBState[]
-    >(`https://mongoserverlearn.onrender.com/trainings/`);
+    >(`https://mongoserverlearn-farc.onrender.com/trainings/`);
     if (res.data) {
       return res.data;
     } else {
@@ -142,7 +142,9 @@ export const getAllTrainingsByStudentId = async (
   try {
     const res: AxiosResponse<trainingDBState[]> = await axios.get<
       trainingDBState[]
-    >(`https://mongoserverlearn.onrender.com/trainings/student/${studentId}`);
+    >(
+      `https://mongoserverlearn-farc.onrender.com/trainings/student/${studentId}`
+    );
     if (res.data) {
       return res.data;
     } else {
@@ -159,7 +161,9 @@ export const getAllTrainingsByTrainerId = async (
   try {
     const res: AxiosResponse<trainingDBState[]> = await axios.get<
       trainingDBState[]
-    >(`https://mongoserverlearn.onrender.com/trainings/trainer/${trainerId}`);
+    >(
+      `https://mongoserverlearn-farc.onrender.com/trainings/trainer/${trainerId}`
+    );
     if (res.data) {
       return res.data;
     } else {

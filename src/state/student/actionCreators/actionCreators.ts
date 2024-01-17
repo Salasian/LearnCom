@@ -47,7 +47,7 @@ export const asyncStudentCreateAction =
   async (dispatch) => {
     try {
       const response = await axios.post(
-        `https://mongoserverlearn.onrender.com/students/`,
+        `https://mongoserverlearn-farc.onrender.com/students/`,
         newStudent,
         {
           headers: {
@@ -95,7 +95,7 @@ export const asyncStudentInitializerAction =
     try {
       // Simulating an asynchronous operation, like fetching data from an API
       const response = await axios.get(
-        `https://mongoserverlearn.onrender.com/students/search?user=${userId}`,
+        `https://mongoserverlearn-farc.onrender.com/students/search?user=${userId}`,
         {
           headers: {
             "Access-Control-Allow-Origin": "*",
@@ -139,7 +139,7 @@ export const asyncStudentDeleteAction =
     const userId = getState().user.id;
     try {
       const response = await axios.delete(
-        `https://mongoserverlearn.onrender.com/students/${userId}`,
+        `https://mongoserverlearn-farc.onrender.com/students/${userId}`,
         {
           headers: {
             "Access-Control-Allow-Origin": "*",
@@ -164,7 +164,7 @@ export const asyncStudentUpdateAction =
     try {
       // Simulating an asynchronous operation, like fetching data from an API
       const response = await axios.put(
-        `https://mongoserverlearn.onrender.com/students/${userId}`,
+        `https://mongoserverlearn-farc.onrender.com/students/${userId}`,
         newStudent,
         {
           headers: {

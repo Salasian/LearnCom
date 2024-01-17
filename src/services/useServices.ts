@@ -55,7 +55,7 @@ const useServices = () => {
 
   const assignStudentToTrainer = async (trainerId: string) => {
     const response = await axios.put(
-      `https://mongoserverlearn.onrender.com/trainers/addStudent/${trainerId}`,
+      `https://mongoserverlearn-farc.onrender.com/trainers/addStudent/${trainerId}`,
       { studentId: student.id }
     );
     const data = await response.data;
@@ -66,7 +66,7 @@ const useServices = () => {
     console.log("Deassign student to trainer id", trainerId);
 
     const response = await axios.put(
-      `https://mongoserverlearn.onrender.com/trainers/deleteStudent/${trainerId}`,
+      `https://mongoserverlearn-farc.onrender.com/trainers/deleteStudent/${trainerId}`,
       { studentId: student.id }
     );
     const data = await response.data;

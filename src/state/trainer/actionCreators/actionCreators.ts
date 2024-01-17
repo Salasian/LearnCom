@@ -39,7 +39,7 @@ export const asyncTrainerCreateAction =
   async (dispatch) => {
     try {
       const response = await axios.post(
-        `https://mongoserverlearn.onrender.com/trainers/`,
+        `https://mongoserverlearn-farc.onrender.com/trainers/`,
         newTrainer,
         {
           headers: {
@@ -86,7 +86,7 @@ export const asyncTrainerInitializerAction =
     const userId = getState().user.id;
     try {
       const response = await axios.get(
-        `https://mongoserverlearn.onrender.com/trainers/search?user=${userId}`,
+        `https://mongoserverlearn-farc.onrender.com/trainers/search?user=${userId}`,
         {
           headers: {
             "Access-Control-Allow-Origin": "*",
@@ -136,7 +136,7 @@ export const asyncTrainerDeleteAction =
     const userId = getState().user.id;
     try {
       const response = await axios.delete(
-        `https://mongoserverlearn.onrender.com/trainers/${userId}`
+        `https://mongoserverlearn-farc.onrender.com/trainers/${userId}`
       );
       const data = await response.data;
 
@@ -155,7 +155,7 @@ export const asyncTrainerUpdateAction =
     const userId = getState().user.id;
     try {
       const response = await axios.put(
-        `https://mongoserverlearn.onrender.com/trainers/${userId}`,
+        `https://mongoserverlearn-farc.onrender.com/trainers/${userId}`,
         newTrainer,
         {
           headers: {

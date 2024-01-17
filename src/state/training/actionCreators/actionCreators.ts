@@ -31,7 +31,7 @@ export const asyncTrainingCreateAction =
       console.log(newTraining);
 
       const response = await axios.post(
-        `https://mongoserverlearn.onrender.com/trainings/`,
+        `https://mongoserverlearn-farc.onrender.com/trainings/`,
         newTraining,
         {
           headers: {
@@ -80,7 +80,7 @@ export const asyncTrainingInitializerAction =
       const uri = user.role === "student" ? `/student/${studentState.id}` : ``;
 
       const response = await axios.get(
-        `https://mongoserverlearn.onrender.com/trainings${uri}`,
+        `https://mongoserverlearn-farc.onrender.com/trainings${uri}`,
         {
           headers: {
             "Access-Control-Allow-Origin": "*",

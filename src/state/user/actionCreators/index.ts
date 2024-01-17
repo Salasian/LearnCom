@@ -38,7 +38,7 @@ export const asyncCreateUserAction =
   async (dispatch) => {
     try {
       const response = await axios.post(
-        `https://mongoserverlearn.onrender.com/users/`,
+        `https://mongoserverlearn-farc.onrender.com/users/`,
         user,
         {
           headers: {
@@ -67,7 +67,7 @@ export const asyncLoginUserAction =
   async (dispatch) => {
     try {
       const response = await axios.get(
-        `https://mongoserverlearn.onrender.com/users/login?username=${username}&password=${password}`,
+        `https://mongoserverlearn-farc.onrender.com/users/login?username=${username}&password=${password}`,
         {
           headers: {
             "Access-Control-Allow-Origin": "*",
@@ -95,7 +95,7 @@ export const asyncUpdateUserAction =
   async (dispatch) => {
     try {
       const response = await axios.put(
-        `https://mongoserverlearn.onrender.com/users/${user.username}`,
+        `https://mongoserverlearn-farc.onrender.com/users/${user.username}`,
         user,
         {
           headers: {
