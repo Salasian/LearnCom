@@ -5,7 +5,7 @@ Short project using Redux, Typescript, reCaptcha, Axios and TailwindCSS. Hosted 
 ## Want to try?
 
 Create an account!
-Hosted Website: http://learn-app-iansalas.s3-website-us-east-1.amazonaws.com
+Hosted Website: http://learn-app-iansalaslopez.s3-website-us-east-1.amazonaws.com
 Hosted NodeJS Server: https://mongoserverlearn-farc.onrender.com
 Some Routes you can try:
 /students - retrieves all students in DB
