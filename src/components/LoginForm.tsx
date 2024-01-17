@@ -128,7 +128,7 @@ const LoginForm = () => {
         </h1>
         <div className="mt-4">
           <ReCAPTCHA
-            sitekey="6LeewR8pAAAAAH0TqObjp_oqmSVRIE4uZR59o-oX"
+            sitekey="6LfVM1QpAAAAANR4wrRIo-Y401bJTF5gk1EPdnTa"
             onChange={onChange}
           />
         </div>
